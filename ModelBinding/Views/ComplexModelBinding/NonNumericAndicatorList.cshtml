@@ -1,0 +1,23 @@
+﻿@using ModelBinding.Models
+@model List<Person>
+@{    
+    ViewBag.Title = "NonNumericAndicatorList";
+}
+
+<h2>NonNumericAndicatorList</h2>
+
+@using (Html.BeginForm())
+{
+    foreach (var item in Model)
+    {
+        <div>
+            <input type="hidden" name="index" />
+            FirstName: @Html.EditorFor(x => item.FirstName, string.Empty, new { id = Guid.NewGuid().ToString()})
+            LastName: @Html.EditorFor(x => item.LastName, string.Empty, new { id = Guid.NewGuid().ToString() })
+            @Html.Hidden(item.BirthDate.ToString())
+            @Html.Hidden(item.Role.ToString())
+        </div>
+    }
+
+    <input type="submit" value="Submit" />
+}

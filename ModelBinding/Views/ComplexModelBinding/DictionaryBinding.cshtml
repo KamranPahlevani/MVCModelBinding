@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "DictionaryBinding";
+}
+<h2>DictionaryBinding</h2>
+
+@using (Html.BeginForm())
+{ 
+    
+    <div>
+        <input type="hidden" name="[0].key" value="firstPerson" />
+        FirstName1: @Html.TextBox("[0].value.FirstName")
+        LastName1: @Html.TextBox("[0].value.LastName")
+    </div>
+
+    <div>
+        <input type="hidden" name="[1].key" value="secondPerson" />
+        FirstName2: @Html.TextBox("[1].value.FirstName")
+        LastName2: @Html.TextBox("[1].value.LastName")
+    </div>
+
+    <input type="submit" value="Submit" />
+}

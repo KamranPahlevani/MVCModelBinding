@@ -1,0 +1,27 @@
+﻿@model ModelBinding.Models.Person
+
+@{
+    ViewBag.Title = "BindComplexModel";
+}
+
+<h2>BindComplexModel</h2>
+
+@using (Html.BeginForm())
+{
+    <table style="width:100%">
+        <tr style="vertical-align:top">
+            <td style="width:60%;">
+               @Html.EditorForModel()
+            </td>
+            <td style="width:40%">
+               @Html.EditorFor(p => p.HomeAddress)    
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center">
+                <input type="submit" value="Submit"/>
+            </td>
+        </tr>
+    </table>
+    
+}
