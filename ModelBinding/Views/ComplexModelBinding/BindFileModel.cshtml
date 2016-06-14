@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "BindFileModel";
+}
+
+<h2>BindFileModel</h2>
+
+<form action="@Url.Action("BindFileModel")" method="post" enctype="multipart/form-data">
+    Upload a photo: <input type="file" name="file"/>
+    <input type="submit" value="Submit"/>
+</form>

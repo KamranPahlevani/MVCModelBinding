@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "UpdateModelInCode";
+}
+
+<h2>UpdateModelInCode</h2>
+
+@using (Html.BeginForm())
+{
+    @:id:@Html.TextBox("id")
+    <input type="submit" value="Submit" />    
+}
+
+@Html.ActionLink("UpdateModelInCode","UpdateModelInCode",new{id="kamran"})    
+
+
